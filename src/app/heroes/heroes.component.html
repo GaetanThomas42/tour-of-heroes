@@ -1,0 +1,15 @@
+<a href="top-heroes">Top Heroes</a><br>
+<label>Hero Name</label><input [(ngModel)]="heroName" name="heroName">
+<button class="btn btn-success" (click)="insertHero()">Add</button>
+<h2>My Heroes</h2>
+<ol class="heroes">
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ol>
+
+<div class="side" *ngIf="selectedHero">
+  <app-hero [hero]="selectedHero"></app-hero>
+</div>

@@ -1,0 +1,8 @@
+<a href="heroes">My Heroes</a>
+
+<div class="row text-center">
+  <div class="col-md-3 mx-3" *ngFor="let hero of topHeroes">
+    <p class="p-5 bg-primary text-light">{{hero.name | uppercase }}</p>
+  </div>
+</div>
+
